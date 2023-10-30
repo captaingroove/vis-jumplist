@@ -1,4 +1,4 @@
-# Select a file location and jump to it
+# Select a file location from a generated list and jump to it
 
 Use vis-menu to open a file at a specific line and column by selecting it from a list.
 The list of files can be generated using a specific command. Currently `make` and `grep`
