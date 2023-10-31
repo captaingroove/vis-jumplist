@@ -7,7 +7,6 @@ module.vis_menu_args = "-l 20"
 module.make_cmd = "make"
 module.grep_cmd = "grep"
 module.grep_options = "-HInrs"
-module.grep_line_length = 100
 
 
 vis:command_register("make", function(argv, force, win, selection, range)
@@ -31,7 +30,7 @@ vis:command_register("grep", function(argv, force, win, selection, range)
 		module.grep_cmd,
 		module.grep_options,
 		table.concat(argv, " "),
-		module.grep_line_length,
+		win.width,
 		module.vis_menu_path,
 		module.vis_menu_args)
 	local status, output, stderr = vis:pipe(win.file, {start = 0, finish = 0}, cmd)

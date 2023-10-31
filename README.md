@@ -32,9 +32,6 @@ plugin_vis_jumplist.grep_cmd = "grep"
 -- Arguments passed to grep (default: "-HInrs")
 plugin_vis_jumplist.grep_options = "-HInrs"
 
--- Display length of matching lines (default: 100)
-plugin_vis_jumplist.grep_line_length = 100
-
 -- Mapping configuration example (<Space>m)
 vis.events.subscribe(vis.events.INIT, function()
     vis:map(vis.modes.NORMAL, " m", ":make<Enter>", "run make in current dir")
